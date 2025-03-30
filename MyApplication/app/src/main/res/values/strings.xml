@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">My Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_aura_dog">your aura dog</string>
+    <string name="get_aura">Get aura</string>
+    <string name="friends">FRIENDS</string>
+    <string name="history">HISTORY</string>
+    <string name="aura">AURA</string>
 </resources>
