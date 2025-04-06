@@ -1,14 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainFragment">
+    android:orientation="vertical"
+    tools:context=".pl.fragments.MainFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#4D0011">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/imageViewDog"
+            android:layout_width="337dp"
+            android:layout_height="337dp"
+            android:contentDescription="@string/your_aura_dog"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/buttonGetDog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4" />
+
+        <ImageView
+            android:id="@+id/imageViewLoading"
+            android:layout_width="337dp"
+            android:layout_height="337dp"
+            android:contentDescription="@string/loader"
+            android:src="@drawable/loading_gif"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/buttonGetDog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <Button
+            android:id="@+id/buttonGetDog"
+            android:layout_width="166dp"
+            android:layout_height="76dp"
+            android:backgroundTint="#8EB9FF"
+            android:fontFamily="@font/monsieur_la_doulaise"
+            android:text="@string/get_aura"
+            android:textColor="#4D0011"
+            android:textSize="14pt"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewDog"
+            app:layout_constraintVertical_bias="0.1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

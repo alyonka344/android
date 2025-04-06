@@ -4,7 +4,7 @@ import retrofit2.Call
 import retrofit2.http.GET
 import ru.kholmogorova.myapplication.dal.model.DogResponse
 
-interface DogApiService {
+interface DogUsecase {
     @GET("woof.json")
-    fun getRandomDog(): Call<DogResponse>
+    suspend fun getRandomDog(): DogResponse
 }

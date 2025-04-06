@@ -7,4 +7,7 @@
     <string name="friends">FRIENDS</string>
     <string name="history">HISTORY</string>
     <string name="aura">AURA</string>
+    <string name="loader">loader</string>
+    <string name="delete">DELETE</string>
+    <string name="date">date</string>
 </resources>

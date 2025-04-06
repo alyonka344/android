@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".pl.MainActivity"
+    android:background="#4D0011">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
@@ -15,65 +16,10 @@
         android:background="#C2858C"
         app:tabIndicatorColor="#4D0011"
         app:tabSelectedTextColor="#4D0011"
-        app:tabTextColor="#902124">
+        app:tabTextColor="#902124"/>
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/aura_tab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/aura" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/history_tab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/history" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/friends_tab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/friends" />
-
-    </com.google.android.material.tabs.TabLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#4D0011">
-
-        <ImageView
-            android:id="@+id/imageViewDog"
-            android:layout_width="339dp"
-            android:layout_height="337dp"
-            android:contentDescription="@string/your_aura_dog"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toTopOf="@+id/buttonGetDog"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.4" />
-
-        <Button
-            android:id="@+id/buttonGetDog"
-            android:layout_width="166dp"
-            android:layout_height="76dp"
-            android:backgroundTint="#8EB9FF"
-            android:fontFamily="@font/monsieur_la_doulaise"
-            android:text="@string/get_aura"
-            android:textColor="#4D0011"
-            android:textSize="14pt"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageViewDog"
-            app:layout_constraintVertical_bias="0.1" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+        android:layout_height="match_parent"/>
 </LinearLayout>
